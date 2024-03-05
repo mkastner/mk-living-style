@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Style Documentation</title>
+  <style>
+    body { display: flex; }
+    #nav { width: 20%; height: 100vh; overflow-y: auto; }
+    #content { flex-grow: 1; padding: 20px; }
+    /* Add more styles here */
+    .style-docs.ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    .style-docs.li {
+      list-style-type: none;
+      display: block;
+      padding: 0;
+      margin: 0;
+    }
+    .style-docs.a {
+      background-color: #f4f4f4;
+      display: block;
+      padding: 0.5em;
+      text-decoration: none;
+      color: #000;
+      font-family: arial, sans-serif;
+      font-size: 16px;
+      &:hover {
+        background-color: #e4e4e4;
+      }
+    }
+  </style>
+  {{#each cssFilePaths}}
+    <link rel="stylesheet" type="text/css" href="../{{this}}">
+  {{/each}}
+</head>
+<body>
+  <div class="nav">
+    <ul class="style-docs ul">
+      {{#each docs}}
+        <li class="style-docs li"><a class="style-docs a" href="#{{@index}}">{{this.title}}</a></li>
+      {{/each}}
+    </ul>
+  </div>
+  <div id="content">
+    {{#each docs}}
+      <div id="{{@index}}">
+        <h2>{{this.title}}</h2>
+        <div>{{{this.exampleHtml}}}</div>
+        <pre><code>{{this.css}}</code></pre>
+      </div>
+    {{/each}}
+  </div>
+</body>
+</html>

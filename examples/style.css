@@ -1,0 +1,52 @@
+:root {
+/** styleDoc
+title: Font Family
+example: <div style="font-family: var(--font-family);">
+  Some Text
+</div>*/
+--font-family: Arial, helvetica, sans-serif;
+
+/** styleDoc
+title: Font Size
+example: <div style="font-size: var(--font-size); font-family: var(--font-family);">
+  Some Text
+</div>*/
+--font-size: 100%;
+
+/** styleDoc
+title: A button 
+example: <button class="button">
+  Button Color 
+</button>*/
+--color-button: #ccc;
+--color-button-background:  #333;
+--line-height-button: 1.4em;
+
+/** styleDoc
+title: A button
+example: <button class="button">
+  Button Color 
+</button>*/
+--color-button: #f00;
+/** styleDoc
+title: A button
+example: <button class="var(--color-button)">
+  Some Text
+</button>*/
+  --color-button-background:  #333;
+/** styleDoc
+title: A Button Text
+example: <div style="var(--color-text)">
+  Some Button Text 
+</div>*/
+--color-text: #00f;
+}
+
+/** styleDoc
+title: A Paragraph
+example: <p>
+  Some paragraph text 
+</p>*/
+p {
+  color: var(--color-text);
+}

@@ -1,0 +1,7 @@
+/** styleDoc title: Red Heading
+      * example: <h1>Hello World</h1>
+      * description: This is a red heading.
+      * */
+      h1 {
+        color: red;
+      }

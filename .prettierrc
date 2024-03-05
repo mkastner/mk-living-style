@@ -1,0 +1,11 @@
+{
+  "singleQuote": true,
+  "overrides": [
+    {
+      "files": ["**/*.css", "**/*.scss", "**/*.html", "**/*.json", "**/*.hbs", "**/*.handelbars"]
+      "options": {
+        "singleQuote": false
+      }
+    }
+  ]
+}

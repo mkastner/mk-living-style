@@ -1,0 +1,16 @@
+{
+  "name": "mk-living-style",
+  "version": "0.0.1",
+  "description": "A Generic Living Style Guide",
+  "main": "index.js",
+  "author": "John Galt",
+  "license": "MIT",
+  "scripts": {
+    "test:log": "node --test test/lib/log.test.mjs"
+  },
+  "dependencies": {
+    "fast-glob": "^3.3.2",
+    "handlebars": "^4.7.8",
+    "markdown-it": "^14.0.0"
+  }
+}
