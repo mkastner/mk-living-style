@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Style Documentation</title>
+  <style>
+    body {
+      display: flex;
+    }
+
+    #nav {
+      width: 20%;
+      height: 100vh;
+      overflow-y: auto;
+    }
+
+    #content {
+      flex-grow: 1;
+      padding: 20px;
+    }
+
+    /* Add more styles here */
+    .style-docs.ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .style-docs.h1, .style-docs.h2, .style-docs.h3, .style-docs.h4,
+    .style-docs.h5, .style-docs.h6 {
+      font-family: arial, sans-serif;
+      display: block;
+      padding: 0;
+      margin: 0;
+    }
+
+    .style-docs.li {
+      font-family: arial, sans-serif;
+      list-style-type: none;
+      display: block;
+      padding: 0;
+      margin: 0;
+    }
+
+    .style-docs.a {
+      background-color: #f4f4f4;
+      display: block;
+      padding: 0.5em;
+      text-decoration: none;
+      color: #000;
+      font-family: arial, sans-serif;
+      font-size: 16px;
+
+      &:hover {
+        background-color: #e4e4e4;
+      }
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" href="../examples/source-style.scss">
+  <link rel="stylesheet" type="text/css" href="../examples/style.css">
+</head>
+
+<body>
+  <div class="nav">
+     
+    
+    <ul>
+        <li><a href="#Root">Root</a>
+            <details>
+              <summary>open</summary>
+              
+    <ul>
+        <li><a href="#Button">Button</a>
+            <details>
+              <summary>open</summary>
+              
+    <ul>
+        <li><a href="#Color">Color</a>
+            <details>
+              <summary>open</summary>
+              
+    <ul>
+        <li><a href="#Background">Background</a>
+        </li>
+        <li><a href="#grey">grey</a>
+        </li>
+        <li><a href="#red">red</a>
+        </li>
+        <li><a href="#Text">Text</a>
+        </li>
+    </ul>
+      <!-- Recursive call -->
+            </details>
+        </li>
+    </ul>
+      <!-- Recursive call -->
+            </details>
+        </li>
+        <li><a href="#Font">Font</a>
+            <details>
+              <summary>open</summary>
+              
+    <ul>
+        <li><a href="#Family">Family</a>
+        </li>
+        <li><a href="#Size">Size</a>
+        </li>
+    </ul>
+      <!-- Recursive call -->
+            </details>
+        </li>
+        <li><a href="#Paragraph">Paragraph</a>
+        </li>
+        <li><a href="#Red">Red</a>
+            <details>
+              <summary>open</summary>
+              
+    <ul>
+        <li><a href="#Heading">Heading</a>
+        </li>
+    </ul>
+      <!-- Recursive call -->
+            </details>
+        </li>
+        <li><a href="#SCSS">SCSS</a>
+            <details>
+              <summary>open</summary>
+              
+    <ul>
+        <li><a href="#Base">Base</a>
+            <details>
+              <summary>open</summary>
+              
+    <ul>
+        <li><a href="#Color">Color</a>
+        </li>
+    </ul>
+      <!-- Recursive call -->
+            </details>
+        </li>
+    </ul>
+      <!-- Recursive call -->
+            </details>
+        </li>
+    </ul>
+      <!-- Recursive call -->
+            </details>
+        </li>
+    </ul>
+  </div>
+  <div id="content">
+    <div id="Button Color Background">
+      <h2 class="style-docs h2">Button Color Background</h2>
+      <div><button class="var(--color-button)">
+  Some Text
+</button></div>
+      <pre><code></code></pre>
+    </div>
+    <div id="Button Color grey">
+      <h2 class="style-docs h2">Button Color grey</h2>
+      <div><button class="button">
+  Button Color 
+</button></div>
+      <pre><code></code></pre>
+    </div>
+    <div id="Button Color red">
+      <h2 class="style-docs h2">Button Color red</h2>
+      <div><button class="button">
+  Button Color 
+</button></div>
+      <pre><code></code></pre>
+    </div>
+    <div id="Button Color Text">
+      <h2 class="style-docs h2">Button Color Text</h2>
+      <div><div style="var(--color-text)">
+  Some Button Text 
+</div></div>
+      <pre><code></code></pre>
+    </div>
+    <div id="Font Family">
+      <h2 class="style-docs h2">Font Family</h2>
+      <div><div style="font-family: var(--font-family);">
+  Some Text
+</div></div>
+      <pre><code></code></pre>
+    </div>
+    <div id="Font Size">
+      <h2 class="style-docs h2">Font Size</h2>
+      <div><div style="font-size: var(--font-size); font-family: var(--font-family);">
+  Some Text
+</div></div>
+      <pre><code></code></pre>
+    </div>
+    <div id="Paragraph">
+      <h2 class="style-docs h2">Paragraph</h2>
+      <div><p>
+  Some paragraph text 
+</p></div>
+      <pre><code></code></pre>
+    </div>
+    <div id="Red Heading">
+      <h2 class="style-docs h2">Red Heading</h2>
+      <div><h1>Hello World</h1>
+      * description: This is a red heading.
+      *</div>
+      <pre><code></code></pre>
+    </div>
+    <div id="SCSS Base Color">
+      <h2 class="style-docs h2">SCSS Base Color</h2>
+      <div><div></div></div>
+      <pre><code></code></pre>
+    </div>
+  </div>
+</body>
+
+</html>

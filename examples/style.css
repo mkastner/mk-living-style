@@ -1,5 +1,5 @@
 :root {
-/** styleDoc
+/*styleDoc
 title: Font Family
 example: <div style="font-family: var(--font-family);">
   Some Text
@@ -14,7 +14,7 @@ example: <div style="font-size: var(--font-size); font-family: var(--font-family
 --font-size: 100%;
 
 /** styleDoc
-title: A button 
+title: Button Color grey 
 example: <button class="button">
   Button Color 
 </button>*/
@@ -23,19 +23,19 @@ example: <button class="button">
 --line-height-button: 1.4em;
 
 /** styleDoc
-title: A button
+title: Button Color red
 example: <button class="button">
   Button Color 
 </button>*/
 --color-button: #f00;
 /** styleDoc
-title: A button
+title: Button Color Background
 example: <button class="var(--color-button)">
   Some Text
 </button>*/
   --color-button-background:  #333;
 /** styleDoc
-title: A Button Text
+title: Button Color Text
 example: <div style="var(--color-text)">
   Some Button Text 
 </div>*/
@@ -43,10 +43,16 @@ example: <div style="var(--color-text)">
 }
 
 /** styleDoc
-title: A Paragraph
+title: Paragraph
 example: <p>
   Some paragraph text 
 </p>*/
 p {
   color: var(--color-text);
+}
+
+.button {
+  color: var(--color-button);
+  background-color: var(--color-button-background);
+  line-height: var(--line-height-button);
 }
