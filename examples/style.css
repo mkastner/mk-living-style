@@ -1,50 +1,48 @@
 :root {
-/*styleDoc
-title: Font Family
-example: <div style="font-family: var(--font-family);">
+/*styleDoc - var Font Family
+The base font family for the site.
+<div style="font-family: var(--font-family);">
   Some Text
 </div>*/
 --font-family: Arial, helvetica, sans-serif;
 
-/** styleDoc
-title: Font Size
-example: <div style="font-size: var(--font-size); font-family: var(--font-family);">
+/** styleDoc - var Font Size
+<div style="font-size: var(--font-size); font-family: var(--font-family);">
   Some Text
 </div>*/
 --font-size: 100%;
 
-/** styleDoc
-title: Button Color grey 
-example: <button class="button">
+/** styleDoc - Button Color grey 
+<button class="button">
   Button Color 
 </button>*/
 --color-button: #ccc;
 --color-button-background:  #333;
 --line-height-button: 1.4em;
 
-/** styleDoc
-title: Button Color red
-example: <button class="button">
+/** styleDoc - Button Color red
+<button class="button">
   Button Color 
 </button>*/
 --color-button: #f00;
-/** styleDoc
-title: Button Color Background
-example: <button class="var(--color-button)">
+
+/** styleDoc - Button Color Background
+<button class="var(--color-button)">
   Some Text
 </button>*/
-  --color-button-background:  #333;
-/** styleDoc
-title: Button Color Text
-example: <div style="var(--color-text)">
+--color-button-background:  #333;
+
+/** styleDoc - Button Color Text
+<div style="var(--color-text)">
   Some Button Text 
 </div>*/
 --color-text: #00f;
+
 }
 
-/** styleDoc
-title: Paragraph
-example: <p>
+/** styleDoc - Paragraph
+A paragraph of text
+<p>
   Some paragraph text 
 </p>*/
 p {

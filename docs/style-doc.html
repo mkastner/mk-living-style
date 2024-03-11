@@ -5,31 +5,129 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Style Documentation</title>
+<!-- Include PrismJS Stylesheet -->
+<link href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css" rel="stylesheet" />
+<!-- Include PrismJS Script -->
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/prism.js"></script>
+
   <style>
     body {
+      margin: 1rem;
       display: flex;
+      gap: 1rem;
     }
 
-    #nav {
+    .style-docs {
+
+      &.nav,
+      &.content {
+        padding: 1rem;
+      }
+
+      .tree-nav, .tree-content {
+        list-style-type: none;
+        font-family: arial, sans-serif;
+        padding: 0;
+        margin: 0;
+      }
+
+      .tree-nav {
+        counter-reset: section-nav;
+        li {
+          counter-increment: section-nav;
+        }
+        a {
+          &::before {
+            content: counters(section-nav, ".") " ";
+          }
+        }
+      }
+
+      .tree-content {
+        counter-reset: section-content;
+        & > li {
+          counter-increment: section-content;
+          & > .title::before {
+            content: counters(section-content, ".") " ";
+          }
+        }
+      }
+    }
+
+    .style-docs.nav {
+      background-color: #f4f4f4;
       width: 20%;
+      min-width: 250px;
       height: 100vh;
       overflow-y: auto;
+
+      .tree-nav {
+
+        li {
+
+          a {
+
+            background-color: white;
+            display: block;
+            padding: 0.5em;
+            text-decoration: none;
+            color: #000;
+            font-family: arial,
+            sans-serif;
+            font-size: 16px;
+            margin-right: 2em;
+
+            &:hover {
+              background-color: #e4e4e4;
+            }
+          }
+
+          &>details {
+            margin-left: 1rem;
+          }
+        }
+
+        details {
+          position: relative;
+
+          summary {
+            list-style: none;
+            cursor: pointer;
+          }
+
+          summary::after {
+            position: absolute;
+            top: -1.5em;
+            right: 0.5em;
+            content: '▼';
+          }
+
+          &[open]>summary::after {
+            color: green;
+            transform: rotate(-90deg);
+          }
+        }
+
+      }
+
+      &>.tree-nav>li>a {
+        font-weight: bold;
+      }
     }
 
-    #content {
+
+    .style-docs.content {
       flex-grow: 1;
-      padding: 20px;
     }
 
     /* Add more styles here */
-    .style-docs.ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-    }
-    
-    .style-docs.h1, .style-docs.h2, .style-docs.h3, .style-docs.h4,
-    .style-docs.h5, .style-docs.h6 {
+
+    .style-docs.h1,
+    .style-docs.h2,
+    .style-docs.h3,
+    .style-docs.h4,
+    .style-docs.h5,
+    .style-docs.h6 {
       font-family: arial, sans-serif;
       display: block;
       padding: 0;
@@ -63,155 +161,203 @@
 </head>
 
 <body>
-  <div class="nav">
-     
+  <div class="style-docs nav">
     
-    <ul>
-        <li><a href="#Root">Root</a>
-            <details>
-              <summary>open</summary>
-              
-    <ul>
-        <li><a href="#Button">Button</a>
-            <details>
-              <summary>open</summary>
-              
-    <ul>
-        <li><a href="#Color">Color</a>
-            <details>
-              <summary>open</summary>
-              
-    <ul>
-        <li><a href="#Background">Background</a>
-        </li>
-        <li><a href="#grey">grey</a>
-        </li>
-        <li><a href="#red">red</a>
-        </li>
-        <li><a href="#Text">Text</a>
-        </li>
-    </ul>
-      <!-- Recursive call -->
-            </details>
-        </li>
-    </ul>
-      <!-- Recursive call -->
-            </details>
-        </li>
-        <li><a href="#Font">Font</a>
-            <details>
-              <summary>open</summary>
-              
-    <ul>
-        <li><a href="#Family">Family</a>
-        </li>
-        <li><a href="#Size">Size</a>
-        </li>
-    </ul>
-      <!-- Recursive call -->
-            </details>
-        </li>
-        <li><a href="#Paragraph">Paragraph</a>
-        </li>
-        <li><a href="#Red">Red</a>
-            <details>
-              <summary>open</summary>
-              
-    <ul>
-        <li><a href="#Heading">Heading</a>
-        </li>
-    </ul>
-      <!-- Recursive call -->
-            </details>
-        </li>
-        <li><a href="#SCSS">SCSS</a>
-            <details>
-              <summary>open</summary>
-              
-    <ul>
-        <li><a href="#Base">Base</a>
-            <details>
-              <summary>open</summary>
-              
-    <ul>
-        <li><a href="#Color">Color</a>
-        </li>
-    </ul>
-      <!-- Recursive call -->
-            </details>
-        </li>
-    </ul>
-      <!-- Recursive call -->
-            </details>
-        </li>
-    </ul>
-      <!-- Recursive call -->
-            </details>
-        </li>
-    </ul>
+<ol class="style-docs tree-nav">
+    <li><a href="#Button">Button</a>
+        <details>
+          <summary></summary>
+<!-- Recursive call must start at the beginning of the line -->
+
+<ol class="style-docs tree-nav">
+    <li><a href="#Color">Color</a>
+        <details>
+          <summary></summary>
+<!-- Recursive call must start at the beginning of the line -->
+
+<ol class="style-docs tree-nav">
+    <li><a href="#Background">Background</a>
+    </li>
+    <li><a href="#grey">grey</a>
+    </li>
+    <li><a href="#red">red</a>
+    </li>
+    <li><a href="#Text">Text</a>
+    </li>
+</ol>
+  <!-- Recursive call -->
+        </details>
+    </li>
+</ol>
+  <!-- Recursive call -->
+        </details>
+    </li>
+    <li><a href="#Paragraph">Paragraph</a>
+    </li>
+    <li><a href="#var">var</a>
+        <details>
+          <summary></summary>
+<!-- Recursive call must start at the beginning of the line -->
+
+<ol class="style-docs tree-nav">
+    <li><a href="#Font">Font</a>
+        <details>
+          <summary></summary>
+<!-- Recursive call must start at the beginning of the line -->
+
+<ol class="style-docs tree-nav">
+    <li><a href="#Size">Size</a>
+    </li>
+</ol>
+  <!-- Recursive call -->
+        </details>
+    </li>
+</ol>
+  <!-- Recursive call -->
+        </details>
+    </li>
+</ol>
   </div>
-  <div id="content">
-    <div id="Button Color Background">
-      <h2 class="style-docs h2">Button Color Background</h2>
-      <div><button class="var(--color-button)">
+  <div class="style-docs content">
+    
+<ol class="style-docs tree-content">
+    <li id="Button">
+      <h3 class="title">
+        Button
+      </h3>
+
+<ol class="style-docs tree-content">
+    <li id="Color">
+      <h3 class="title">
+        Color
+      </h3>
+
+<ol class="style-docs tree-content">
+    <li id="Background">
+      <h3 class="title">
+        Background
+      </h3>
+        <div><button class="var(--color-button)">
   Some Text
 </button></div>
-      <pre><code></code></pre>
-    </div>
-    <div id="Button Color grey">
-      <h2 class="style-docs h2">Button Color grey</h2>
-      <div><button class="button">
+<!-- pre must start at the beginning of the line -->
+<pre><code class="language-css">--color-button-background:  #333;</code></pre>
+        <details>
+          <summary>Show Example Code</summary>
+<pre><code class="language-html">&lt;button class&#x3D;&quot;var(--color-button)&quot;&gt;
+  Some Text
+&lt;/button&gt;</code></pre>
+        </details>
+    </li>
+    <li id="grey">
+      <h3 class="title">
+        grey
+      </h3>
+        <div><button class="button">
   Button Color 
 </button></div>
-      <pre><code></code></pre>
-    </div>
-    <div id="Button Color red">
-      <h2 class="style-docs h2">Button Color red</h2>
-      <div><button class="button">
+<!-- pre must start at the beginning of the line -->
+<pre><code class="language-css">--color-button: #ccc;
+--color-button-background:  #333;
+--line-height-button: 1.4em;</code></pre>
+        <details>
+          <summary>Show Example Code</summary>
+<pre><code class="language-html">&lt;button class&#x3D;&quot;button&quot;&gt;
+  Button Color 
+&lt;/button&gt;</code></pre>
+        </details>
+    </li>
+    <li id="red">
+      <h3 class="title">
+        red
+      </h3>
+        <div><button class="button">
   Button Color 
 </button></div>
-      <pre><code></code></pre>
-    </div>
-    <div id="Button Color Text">
-      <h2 class="style-docs h2">Button Color Text</h2>
-      <div><div style="var(--color-text)">
+<!-- pre must start at the beginning of the line -->
+<pre><code class="language-css">--color-button: #f00;</code></pre>
+        <details>
+          <summary>Show Example Code</summary>
+<pre><code class="language-html">&lt;button class&#x3D;&quot;button&quot;&gt;
+  Button Color 
+&lt;/button&gt;</code></pre>
+        </details>
+    </li>
+    <li id="Text">
+      <h3 class="title">
+        Text
+      </h3>
+        <div><div style="var(--color-text)">
   Some Button Text 
 </div></div>
-      <pre><code></code></pre>
-    </div>
-    <div id="Font Family">
-      <h2 class="style-docs h2">Font Family</h2>
-      <div><div style="font-family: var(--font-family);">
-  Some Text
-</div></div>
-      <pre><code></code></pre>
-    </div>
-    <div id="Font Size">
-      <h2 class="style-docs h2">Font Size</h2>
-      <div><div style="font-size: var(--font-size); font-family: var(--font-family);">
-  Some Text
-</div></div>
-      <pre><code></code></pre>
-    </div>
-    <div id="Paragraph">
-      <h2 class="style-docs h2">Paragraph</h2>
-      <div><p>
+<!-- pre must start at the beginning of the line -->
+<pre><code class="language-css">--color-text: #00f;</code></pre>
+        <details>
+          <summary>Show Example Code</summary>
+<pre><code class="language-html">&lt;div style&#x3D;&quot;var(--color-text)&quot;&gt;
+  Some Button Text 
+&lt;/div&gt;</code></pre>
+        </details>
+    </li>
+</ol>
+  <!-- Recursive call -->
+    </li>
+</ol>
+  <!-- Recursive call -->
+    </li>
+    <li id="Paragraph">
+      <h3 class="title">
+        Paragraph
+      </h3>
+        <div><p>
   Some paragraph text 
 </p></div>
-      <pre><code></code></pre>
-    </div>
-    <div id="Red Heading">
-      <h2 class="style-docs h2">Red Heading</h2>
-      <div><h1>Hello World</h1>
-      * description: This is a red heading.
-      *</div>
-      <pre><code></code></pre>
-    </div>
-    <div id="SCSS Base Color">
-      <h2 class="style-docs h2">SCSS Base Color</h2>
-      <div><div></div></div>
-      <pre><code></code></pre>
-    </div>
+<!-- pre must start at the beginning of the line -->
+<pre><code class="language-css">p {
+  color: var(--color-text);
+}</code></pre>
+        <details>
+          <summary>Show Example Code</summary>
+<pre><code class="language-html">&lt;p&gt;
+  Some paragraph text 
+&lt;/p&gt;</code></pre>
+        </details>
+    </li>
+    <li id="var">
+      <h3 class="title">
+        var
+      </h3>
+
+<ol class="style-docs tree-content">
+    <li id="Font">
+      <h3 class="title">
+        Font
+      </h3>
+
+<ol class="style-docs tree-content">
+    <li id="Size">
+      <h3 class="title">
+        Size
+      </h3>
+        <div><div style="font-size: var(--font-size); font-family: var(--font-family);">
+  Some Text
+</div></div>
+<!-- pre must start at the beginning of the line -->
+<pre><code class="language-css">--font-size: 100%;</code></pre>
+        <details>
+          <summary>Show Example Code</summary>
+<pre><code class="language-html">&lt;div style&#x3D;&quot;font-size: var(--font-size); font-family: var(--font-family);&quot;&gt;
+  Some Text
+&lt;/div&gt;</code></pre>
+        </details>
+    </li>
+</ol>
+  <!-- Recursive call -->
+    </li>
+</ol>
+  <!-- Recursive call -->
+    </li>
+</ol>
   </div>
 </body>
 
