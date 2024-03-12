@@ -12,6 +12,14 @@ The base font family for the site.
 </div>*/
 --font-size: 100%;
 
+/** styleDoc - Color base 
+<div data-loop="" style="background-color: var([item]);" class="style-docs color-bright">
+  Color [item] 
+</div>*/
+--color-text: #ccc;
+--color-primary:  #c00;
+--color-secondary: #0c0;
+
 /** styleDoc - Button Color grey 
 <button class="button">
   Button Color 

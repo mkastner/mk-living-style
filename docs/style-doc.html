@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Style Documentation</title>
-<!-- Include PrismJS Stylesheet -->
-<link href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css" rel="stylesheet" />
-<!-- Include PrismJS Script -->
-<script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/prism.js"></script>
+  <!-- Include PrismJS Stylesheet -->
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css" rel="stylesheet" />
+  <!-- Include PrismJS Script -->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/prism.js"></script>
 
   <style>
     body {
@@ -24,7 +24,15 @@
         padding: 1rem;
       }
 
-      .tree-nav, .tree-content {
+      &.color-bright {
+        color: #fff;
+      }
+      &.color-dark {
+        color: #333;
+      }
+
+      .tree-nav,
+      .tree-content {
         list-style-type: none;
         font-family: arial, sans-serif;
         padding: 0;
@@ -33,9 +41,11 @@
 
       .tree-nav {
         counter-reset: section-nav;
+
         li {
           counter-increment: section-nav;
         }
+
         a {
           &::before {
             content: counters(section-nav, ".") " ";
@@ -43,11 +53,27 @@
         }
       }
 
+      &.color-boxes {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 1rem;
+        & > * {
+          /* max-width: 300px; */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 50px;
+        }
+
+      }
+
       .tree-content {
         counter-reset: section-content;
-        & > li {
+
+        &>li {
           counter-increment: section-content;
-          & > .title::before {
+
+          &>.title::before {
             content: counters(section-content, ".") " ";
           }
         }
@@ -73,7 +99,7 @@
             text-decoration: none;
             color: #000;
             font-family: arial,
-            sans-serif;
+              sans-serif;
             font-size: 16px;
             margin-right: 2em;
 
@@ -192,6 +218,18 @@
   <!-- Recursive call -->
         </details>
     </li>
+    <li><a href="#Color">Color</a>
+        <details>
+          <summary></summary>
+<!-- Recursive call must start at the beginning of the line -->
+
+<ol class="style-docs tree-nav">
+    <li><a href="#base">base</a>
+    </li>
+</ol>
+  <!-- Recursive call -->
+        </details>
+    </li>
     <li><a href="#Paragraph">Paragraph</a>
     </li>
     <li><a href="#var">var</a>
@@ -301,6 +339,45 @@
     </li>
 </ol>
   <!-- Recursive call -->
+    </li>
+</ol>
+  <!-- Recursive call -->
+    </li>
+    <li id="Color">
+      <h3 class="title">
+        Color
+      </h3>
+
+<ol class="style-docs tree-content">
+    <li id="base">
+      <h3 class="title">
+        base
+      </h3>
+        <div><div data-loop="" style="background-color: var(--color-text);" class="style-docs color-bright">
+  Color --color-text 
+</div>
+<div data-loop="" style="background-color: var(--color-primary);" class="style-docs color-bright">
+  Color --color-primary 
+</div>
+<div data-loop="" style="background-color: var(--color-secondary);" class="style-docs color-bright">
+  Color --color-secondary 
+</div></div>
+<!-- pre must start at the beginning of the line -->
+<pre><code class="language-css">--color-text: #ccc;
+--color-primary:  #c00;
+--color-secondary: #0c0;</code></pre>
+        <details>
+          <summary>Show Example Code</summary>
+<pre><code class="language-html">&lt;div data-loop&#x3D;&quot;&quot; style&#x3D;&quot;background-color: var(--color-text);&quot; class&#x3D;&quot;style-docs color-bright&quot;&gt;
+  Color --color-text 
+&lt;/div&gt;
+&lt;div data-loop&#x3D;&quot;&quot; style&#x3D;&quot;background-color: var(--color-primary);&quot; class&#x3D;&quot;style-docs color-bright&quot;&gt;
+  Color --color-primary 
+&lt;/div&gt;
+&lt;div data-loop&#x3D;&quot;&quot; style&#x3D;&quot;background-color: var(--color-secondary);&quot; class&#x3D;&quot;style-docs color-bright&quot;&gt;
+  Color --color-secondary 
+&lt;/div&gt;</code></pre>
+        </details>
     </li>
 </ol>
   <!-- Recursive call -->

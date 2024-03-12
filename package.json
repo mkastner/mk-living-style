@@ -5,6 +5,9 @@
   "main": "index.js",
   "author": "John Galt",
   "license": "MIT",
+  "bin": {
+    "mk-living-style": "bin/mk-living-style.js"
+  },
   "scripts": {
     "test:log": "node --test test/lib/log.test.mjs"
   },

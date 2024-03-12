@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Style Documentation</title>
-<!-- Include PrismJS Stylesheet -->
-<link href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css" rel="stylesheet" />
-<!-- Include PrismJS Script -->
-<script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/prism.js"></script>
+  <!-- Include PrismJS Stylesheet -->
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css" rel="stylesheet" />
+  <!-- Include PrismJS Script -->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/prism.js"></script>
 
   <style>
     body {
@@ -24,7 +24,15 @@
         padding: 1rem;
       }
 
-      .tree-nav, .tree-content {
+      &.color-bright {
+        color: #fff;
+      }
+      &.color-dark {
+        color: #333;
+      }
+
+      .tree-nav,
+      .tree-content {
         list-style-type: none;
         font-family: arial, sans-serif;
         padding: 0;
@@ -33,9 +41,11 @@
 
       .tree-nav {
         counter-reset: section-nav;
+
         li {
           counter-increment: section-nav;
         }
+
         a {
           &::before {
             content: counters(section-nav, ".") " ";
@@ -43,11 +53,27 @@
         }
       }
 
+      &.color-boxes {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 1rem;
+        & > * {
+          /* max-width: 300px; */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 50px;
+        }
+
+      }
+
       .tree-content {
         counter-reset: section-content;
-        & > li {
+
+        &>li {
           counter-increment: section-content;
-          & > .title::before {
+
+          &>.title::before {
             content: counters(section-content, ".") " ";
           }
         }
@@ -73,7 +99,7 @@
             text-decoration: none;
             color: #000;
             font-family: arial,
-            sans-serif;
+              sans-serif;
             font-size: 16px;
             margin-right: 2em;
 
