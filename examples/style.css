@@ -1,10 +1,21 @@
 :root {
-/*styleDoc - var Font Family
+/** styleDoc - var Font Family
 The base font family for the site.
-<div style="font-family: var(--font-family);">
-  Some Text
+<div data-loop style="font-family: var(--font-family);">
+  Some Text [item]
 </div>*/
---font-family: Arial, helvetica, sans-serif;
+--font-family: "Roboto", helvetica, sans-serif;
+
+
+/** styleDoc - var Font weight 
+Available font weights for the site.
+<div data-loop style="font-family: var(--font-family); font-weight: var([item]);">
+  [item]
+</div>*/
+--font-weight-normal: normal;
+--font-weight-medium: 500;
+--font-weight-bold: bold;
+--font-weight-black: 900;
 
 /** styleDoc - var Font Size
 <div style="font-size: var(--font-size); font-family: var(--font-family);">
@@ -13,8 +24,10 @@ The base font family for the site.
 --font-size: 100%;
 
 /** styleDoc - Color base 
-<div data-loop="" style="background-color: var([item]);" class="style-docs color-bright">
-  Color [item] 
+<div class="style-docs color-boxes">
+  <div data-loop="" style="background-color: var([item]);" class="style-docs color-bright">
+    Color [item] 
+  </div>
 </div>*/
 --color-text: #ccc;
 --color-primary:  #c00;
@@ -44,7 +57,7 @@ The base font family for the site.
 <div style="var(--color-text)">
   Some Button Text 
 </div>*/
---color-text: #00f;
+--color-text: magenta;
 
 }
 

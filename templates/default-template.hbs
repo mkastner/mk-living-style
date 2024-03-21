@@ -31,15 +31,15 @@
         color: #333;
       }
 
-      .tree-nav,
-      .tree-content {
+      &.tree-nav,
+      &.tree-content {
         list-style-type: none;
         font-family: arial, sans-serif;
         padding: 0;
         margin: 0;
       }
 
-      .tree-nav {
+      &.tree-nav {
         counter-reset: section-nav;
 
         li {
@@ -53,15 +53,17 @@
         }
       }
 
-      &.color-boxes {
+      &.color-boxes, &.control-boxes {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
         gap: 1rem;
         & > * {
           /* max-width: 300px; */
+          padding: 0.25rem 1rem;
           display: flex;
           justify-content: center;
           align-items: center;
+          text-align: center;
           height: 50px;
         }
 
@@ -73,8 +75,31 @@
         &>li {
           counter-increment: section-content;
 
-          &>.title::before {
-            content: counters(section-content, ".") " ";
+          &>.title {
+            &::before {
+              content: counters(section-content, ".") " ";
+            }
+            &>.go-top {
+              margin-left: 1rem;
+              text-decoration: none;
+              color: inherit;
+            }
+          }
+        }
+      }
+      &.summary {
+        padding: 0.5em 1em;
+        color: #333;
+      }
+      &.details {
+        margin: 0.5em 0;
+        border: 1px solid #e4e4e4;
+        pre {
+          margin: 0;
+        }
+        p {
+          &:last-child {
+            margin-bottom: 0;
           }
         }
       }
@@ -167,7 +192,13 @@
       padding: 0;
       margin: 0;
     }
-
+    
+    .style-docs.p {
+      color: #333; 
+      padding: 0.5rem 0;
+      font-family: arial, sans-serif;
+    }
+    
     .style-docs.a {
       background-color: #f4f4f4;
       display: block;
@@ -183,15 +214,26 @@
     }
   </style>
   {{#each cssFilePaths}}
-  <link rel="stylesheet" type="text/css" href="../{{this}}">
+    <link rel="stylesheet" type="text/css" href="../{{this}}">
   {{/each}}
+  <style> 
+    {{#each fontData}}
+      @font-face {
+      font-family: {{fontFamily}};
+        font-weight: {{fontWeight}};
+        font-display: swap;
+        font-style: {{fontStyle}};
+        src: local("{{srcLocal}}"), url("{{srcUrl}}") format("{{srcFormat}}");
+      }
+    {{/each}}
+  </style>
 </head>
 
 <body>
   <div class="style-docs nav">
     {{> listPartialNavTree docsTree.children }}
   </div>
-  <div class="style-docs content">
+  <div class="style-docs content" id="page-top">
     {{> listPartialContentTree docsTree.children }}
   </div>
 </body>

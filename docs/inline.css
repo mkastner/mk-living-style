@@ -1,0 +1,93 @@
+
+    
+      .app-teaser-component { 
+        h2 {
+          flex: 1 1 100%; 
+          margin-top: 0;
+          margin-bottom: 0.5em;
+          font-size: 1.6rem;
+          font-weight: 600;
+          color: var(--color-primary-light);
+        }
+        form {
+          padding-top: 0.5em;
+          width: 100%;
+        }
+        fieldset, .command-bar {
+          width: 100%; 
+          padding:0;
+          margin:0.5rem 0;
+          display: flex;
+          flex-flow: row nowrap;
+          gap: 0.5em;
+        }
+        fieldset {
+          border: none;
+        } 
+        fieldset:first-child {
+          margin-top: 0;
+        }
+        fieldset:last-child {
+          margin-bottom: 0;
+        }
+        fieldset .label {
+          font-weight: 600;
+          padding: var(--padding-text); 
+          padding-left: 0;
+          font-family: var(--font-family);
+          color: var(--color-text);
+          flex: 1 1 33.333%;
+        }
+        fieldset button {
+          color: var(--color-secondary-shiny);
+          flex: 1 1 33.3333%;
+        } 
+        fieldset button.active {
+          color: white;
+        }
+        .command-bar {
+          margin-bottom: 0; 
+        }
+        .command-bar input[type=submit] {
+           width: calc(66.6666% - 0.125rem);
+           display: block;
+           margin: 0 0 0 auto;
+        }
+      }
+    
+
+      .web-component-private-css { 
+        /** styleDoc - Component Typography H3
+        <h3>Hello Private CSS World</h3>
+        */
+        h2 {
+          color: brown; 
+        }
+        
+        /** styleDoc - Component Typography H4
+        <h4>Hello Private CSS World</h4>
+        */
+        h2 {
+          color: maroon; 
+        }
+
+      }
+      
+.web-component { 
+      /** styleDoc - Component Typography H1
+      A public css – not namespaced
+      <h1>Hello public World</h1>
+      */
+      h1 {
+        color: red;
+      }
+
+      /** styleDoc - Component Typography H2 
+      A public css – not namespaced
+      <h2>Hello public World</h2>
+      */
+      h2 {
+        color: green;
+      }
+
+     }

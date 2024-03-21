@@ -1,5 +1,6 @@
 const extractStyleDocs = require('./lib/extract-style-docs');
 const generateHTMLReport = require('./lib/generate-html-report');
+const loadConfigFile = require('./lib/load-config-file');
 const readline = require('readline');
 const log = require('./lib/log');
 const path = require('path');
@@ -35,12 +36,13 @@ function getStyleRoot() {
 (async () => {
 
   const styleRoot = await getStyleRoot();
+  const config = await loadConfigFile();
   //log.info('Style root', styleRoot);
   const {docsList, docsTree, cssFilePaths} = await extractStyleDocs(styleRoot);
   //log.info('Docs list', docsList); 
   //log.info('Docs tree', JSON.stringify(docsTree, null, 2));
   //log.info('CSS file paths', cssFilePaths);
-  generateHTMLReport(
+  await generateHTMLReport(
     //'templates/default-template.hbs',
     absoluteTemplatePath,
     {
