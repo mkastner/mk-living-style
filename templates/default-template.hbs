@@ -24,11 +24,15 @@
         padding: 1rem;
       }
 
-      &.color-bright {
-        color: #fff;
-      }
-      &.color-dark {
-        color: #333;
+      &.color {
+        &.dark {
+          /* bright foreground for dark background */
+          color: #fff;
+        }
+        &.bright {
+          /* dark foreground for bright background */
+          color: #333;
+        }
       }
 
       &.tree-nav,
@@ -64,17 +68,26 @@
           justify-content: center;
           align-items: center;
           text-align: center;
-          height: 50px;
+          min-height: 50px;
         }
 
       }
-
+      &.color-boxes {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      }
+      &.control-boxes {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      }
       .tree-content {
         counter-reset: section-content;
 
         &>li {
           counter-increment: section-content;
-
+          ol {
+            /* indentation of ol only
+               inside li */
+            margin-left: 1rem;
+          }
           &>.title {
             &::before {
               content: counters(section-content, ".") " ";
@@ -86,6 +99,11 @@
             }
           }
         }
+      }
+      &.description {
+        padding: 0.5em 0;
+        font-family: arial, sans-serif;
+        color: #333;
       }
       &.summary {
         padding: 0.5em 1em;
@@ -234,7 +252,8 @@
     {{> listPartialNavTree docsTree.children }}
   </div>
   <div class="style-docs content" id="page-top">
-    {{> listPartialContentTree docsTree.children }}
+<!-- don't indent listPartialContentTree -->
+{{> listPartialContentTree docsTree.children }}
   </div>
 </body>
 

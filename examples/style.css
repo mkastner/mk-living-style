@@ -2,15 +2,15 @@
 /** styleDoc - var Font Family
 The base font family for the site.
 <div data-loop style="font-family: var(--font-family);">
-  Some Text [item]
+  Some Text [cssName]
 </div>*/
 --font-family: "Roboto", helvetica, sans-serif;
 
 
 /** styleDoc - var Font weight 
 Available font weights for the site.
-<div data-loop style="font-family: var(--font-family); font-weight: var([item]);">
-  [item]
+<div data-loop style="font-family: var(--font-family); font-weight: var([cssName]);">
+  [cssName]
 </div>*/
 --font-weight-normal: normal;
 --font-weight-medium: 500;
@@ -25,8 +25,8 @@ Available font weights for the site.
 
 /** styleDoc - Color base 
 <div class="style-docs color-boxes">
-  <div data-loop="" style="background-color: var([item]);" class="style-docs color-bright">
-    Color [item] 
+  <div data-loop="" style="background-color: var([cssName]);" class="style-docs color-bright">
+    Color [cssName] 
   </div>
 </div>*/
 --color-text: #ccc;
@@ -69,6 +69,23 @@ A paragraph of text
 p {
   color: var(--color-text);
 }
+
+/** styleDoc - Paragraph
+A paragraph of text
+<p class="[cssName]">
+  Some paragraph text 
+</p>*/
+.confirm {
+  color: #0c0;
+}
+.warning {
+  color: #f90;
+}
+.error {
+  color: #c00;
+}
+
+
 
 .button {
   color: var(--color-button);

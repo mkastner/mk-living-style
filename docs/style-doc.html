@@ -24,11 +24,15 @@
         padding: 1rem;
       }
 
-      &.color-bright {
-        color: #fff;
-      }
-      &.color-dark {
-        color: #333;
+      &.color {
+        &.dark {
+          /* bright foreground for dark background */
+          color: #fff;
+        }
+        &.bright {
+          /* dark foreground for bright background */
+          color: #333;
+        }
       }
 
       &.tree-nav,
@@ -53,7 +57,7 @@
         }
       }
 
-      &.color-boxes {
+      &.color-boxes, &.control-boxes {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
         gap: 1rem;
@@ -64,17 +68,26 @@
           justify-content: center;
           align-items: center;
           text-align: center;
-          height: 50px;
+          min-height: 50px;
         }
 
       }
-
+      &.color-boxes {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      }
+      &.control-boxes {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      }
       .tree-content {
         counter-reset: section-content;
 
         &>li {
           counter-increment: section-content;
-
+          ol {
+            /* indentation of ol only
+               inside li */
+            margin-left: 1rem;
+          }
           &>.title {
             &::before {
               content: counters(section-content, ".") " ";
@@ -86,6 +99,11 @@
             }
           }
         }
+      }
+      &.description {
+        padding: 0.5em 0;
+        font-family: arial, sans-serif;
+        color: #333;
       }
       &.summary {
         padding: 0.5em 1em;
@@ -427,7 +445,8 @@
 </ol>
   </div>
   <div class="style-docs content" id="page-top">
-    
+<!-- don't indent listPartialContentTree -->
+
 <ol class="style-docs tree-content">
     <li id="Button">
       <h3 class="title">
@@ -613,6 +632,9 @@
         <span>Component Typography H1</span>
         <a href="#page-top" title="Go Top" class="go-top">&uarr;</a>
       </h3>
+          <p class="style-docs description">
+            A public css – not namespaced
+          </p>
         <div class="web-component">
           <h1>Hello public World</h1>
         </div>
@@ -620,8 +642,8 @@
         <details class="style-docs details">
           <summary class="style-docs summary">Show Style Definition</summary>
 <pre><code class="language-css">h1 {
-        color: red;
-      }</code></pre>
+  color: red;
+}</code></pre>
         </details>
         <details class="style-docs details">
           <summary class="style-docs summary">Show Example Code</summary>
@@ -634,6 +656,9 @@
         <span>Component Typography H2</span>
         <a href="#page-top" title="Go Top" class="go-top">&uarr;</a>
       </h3>
+          <p class="style-docs description">
+            A public css – not namespaced
+          </p>
         <div class="web-component">
           <h2>Hello public World</h2>
         </div>
@@ -641,8 +666,8 @@
         <details class="style-docs details">
           <summary class="style-docs summary">Show Style Definition</summary>
 <pre><code class="language-css">h2 {
-        color: green;
-      }</code></pre>
+  color: green;
+}</code></pre>
         </details>
         <details class="style-docs details">
           <summary class="style-docs summary">Show Example Code</summary>
@@ -662,8 +687,8 @@
         <details class="style-docs details">
           <summary class="style-docs summary">Show Style Definition</summary>
 <pre><code class="language-css">h2 {
-          color: brown; 
-        }</code></pre>
+  color: brown; 
+}</code></pre>
         </details>
         <details class="style-docs details">
           <summary class="style-docs summary">Show Example Code</summary>
@@ -683,8 +708,8 @@
         <details class="style-docs details">
           <summary class="style-docs summary">Show Style Definition</summary>
 <pre><code class="language-css">h2 {
-          color: maroon; 
-        }</code></pre>
+  color: maroon; 
+}</code></pre>
         </details>
         <details class="style-docs details">
           <summary class="style-docs summary">Show Example Code</summary>
@@ -703,24 +728,33 @@
         <span>Paragraph</span>
         <a href="#page-top" title="Go Top" class="go-top">&uarr;</a>
       </h3>
+          <p class="style-docs description">
+            A paragraph of text
+          </p>
         <div >
-          <p>
+          <p class="[cssName]">
   Some paragraph text 
 </p>
         </div>
 <!-- pre must start at the beginning of the line -->
         <details class="style-docs details">
           <summary class="style-docs summary">Show Style Definition</summary>
-<pre><code class="language-css">p {
-  color: var(--color-text);
+<pre><code class="language-css">.confirm {
+  color: #0c0;
+}
+.warning {
+  color: #f90;
+}
+.error {
+  color: #c00;
 }</code></pre>
         </details>
         <details class="style-docs details">
           <summary class="style-docs summary">Show Example Code</summary>
-<pre><code class="language-html">&lt;p&gt;
+<pre><code class="language-html">&lt;p class&#x3D;&quot;[cssName]&quot;&gt;
   Some paragraph text 
 &lt;/p&gt;</code></pre>
-           <p class="style-docs p">Source: <a class="style-docs tree-content a" href="../examples/style.css#64">examples/style.css:64</a></p>
+           <p class="style-docs p">Source: <a class="style-docs tree-content a" href="../examples/style.css#73">examples/style.css:73</a></p>
         </details>
     </li>
     <li id="var">
@@ -742,6 +776,9 @@
         <span>var Font Family</span>
         <a href="#page-top" title="Go Top" class="go-top">&uarr;</a>
       </h3>
+          <p class="style-docs description">
+            The base font family for the site.
+          </p>
         <div >
           <div data-loop style="font-family: var(--font-family);">
   Some Text --font-family
@@ -788,6 +825,9 @@
         <span>var Font weight</span>
         <a href="#page-top" title="Go Top" class="go-top">&uarr;</a>
       </h3>
+          <p class="style-docs description">
+            Available font weights for the site.
+          </p>
         <div >
           <div data-loop style="font-family: var(--font-family); font-weight: var(--font-weight-normal);">
   --font-weight-normal
