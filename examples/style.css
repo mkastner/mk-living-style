@@ -70,9 +70,9 @@ p {
   color: var(--color-text);
 }
 
-/** styleDoc - Paragraph
+/** styleDoc - Paragraph modifier
 A paragraph of text
-<p class="[cssName]">
+<p data-loop class="[cssName]">
   Some paragraph text 
 </p>*/
 .confirm {
@@ -85,7 +85,22 @@ A paragraph of text
   color: #c00;
 }
 
-
+/** styleDoc - Error modifier
+A paragraph of text
+<h3 data-loop class="[cssName]">
+  Some paragraph text 
+</h3>*/
+.error {
+  &.confirm {
+    color: #0c0;
+  }
+  .warning {
+    color: #f90;
+  }
+  &.error {
+    color: #c00;
+  }
+}
 
 .button {
   color: var(--color-button);
