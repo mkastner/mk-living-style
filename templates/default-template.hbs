@@ -72,6 +72,31 @@
         }
 
       }
+      &.margin-boxes {
+        background-color: #e4e4e4;
+        & > * {
+          /* demonstrate margin */  
+          border: 1px dashed #333;
+          background-color: white;
+          & > * {
+            border: 1px dashed #333;
+            background-color: #e4e4e4;
+            /* demonstrate margin */  
+          }
+        }
+      }
+      &.padding-boxes {
+        & > * {
+          /* demonstrate padding */  
+          border: 1px dashed #333;
+          background-color: #e4e4e4;
+          & > * {
+            border: 1px dashed #333;
+            background-color: #e4e4e4;
+            /* demonstrate margin */  
+          }
+        }
+      }
       &.color-boxes {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
       }

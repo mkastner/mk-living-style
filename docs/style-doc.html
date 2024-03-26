@@ -72,6 +72,31 @@
         }
 
       }
+      &.margin-boxes {
+        background-color: #e4e4e4;
+        & > * {
+          /* demonstrate margin */  
+          border: 1px dashed #333;
+          background-color: white;
+          & > * {
+            border: 1px dashed #333;
+            background-color: #e4e4e4;
+            /* demonstrate margin */  
+          }
+        }
+      }
+      &.padding-boxes {
+        & > * {
+          /* demonstrate padding */  
+          border: 1px dashed #333;
+          background-color: #e4e4e4;
+          & > * {
+            border: 1px dashed #333;
+            background-color: #e4e4e4;
+            /* demonstrate margin */  
+          }
+        }
+      }
       &.color-boxes {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
       }
@@ -327,30 +352,27 @@
     
 <ol class="style-docs tree-nav">
     <li>
-    <a href="#Button" title="Button">Button</a>
+    <a href="#var" title="var">var 1</a>
         <details>
           <summary></summary>
 <!-- Recursive call must start at the beginning of the line -->
 
 <ol class="style-docs tree-nav">
     <li>
-    <a href="#Button Color" title="Button Color">Color</a>
+    <a href="#var Font" title="var Font">Font </a>
         <details>
           <summary></summary>
 <!-- Recursive call must start at the beginning of the line -->
 
 <ol class="style-docs tree-nav">
     <li>
-    <a href="#Button Color Background" title="Button Color Background">Background</a>
+    <a href="#var Font Family" title="var Font Family">Family 0</a>
     </li>
     <li>
-    <a href="#Button Color grey" title="Button Color grey">grey</a>
+    <a href="#var Font Size" title="var Font Size">Size 0</a>
     </li>
     <li>
-    <a href="#Button Color red" title="Button Color red">red</a>
-    </li>
-    <li>
-    <a href="#Button Color Text" title="Button Color Text">Text</a>
+    <a href="#var Font weight" title="var Font weight">weight 0</a>
     </li>
 </ol>
   <!-- Recursive call -->
@@ -361,44 +383,58 @@
         </details>
     </li>
     <li>
-    <a href="#Color" title="Color">Color</a>
+    <a href="#Color" title="Color">Color 2</a>
         <details>
           <summary></summary>
 <!-- Recursive call must start at the beginning of the line -->
 
 <ol class="style-docs tree-nav">
     <li>
-    <a href="#Color base" title="Color base">base</a>
+    <a href="#Color base" title="Color base">base 0</a>
     </li>
 </ol>
   <!-- Recursive call -->
         </details>
     </li>
     <li>
-    <a href="#Component" title="Component">Component</a>
+    <a href="#Error" title="Error">Error 2</a>
         <details>
           <summary></summary>
 <!-- Recursive call must start at the beginning of the line -->
 
 <ol class="style-docs tree-nav">
     <li>
-    <a href="#Component Typography" title="Component Typography">Typography</a>
+    <a href="#Error modifier" title="Error modifier">modifier 0</a>
+    </li>
+</ol>
+  <!-- Recursive call -->
+        </details>
+    </li>
+    <li>
+    <a href="#Button" title="Button">Button 3</a>
         <details>
           <summary></summary>
 <!-- Recursive call must start at the beginning of the line -->
 
 <ol class="style-docs tree-nav">
     <li>
-    <a href="#Component Typography H1" title="Component Typography H1">H1</a>
+    <a href="#Button Color" title="Button Color">Color </a>
+        <details>
+          <summary></summary>
+<!-- Recursive call must start at the beginning of the line -->
+
+<ol class="style-docs tree-nav">
+    <li>
+    <a href="#Button Color Background" title="Button Color Background">Background 0</a>
     </li>
     <li>
-    <a href="#Component Typography H2" title="Component Typography H2">H2</a>
+    <a href="#Button Color grey" title="Button Color grey">grey 0</a>
     </li>
     <li>
-    <a href="#Component Typography H3" title="Component Typography H3">H3</a>
+    <a href="#Button Color red" title="Button Color red">red 0</a>
     </li>
     <li>
-    <a href="#Component Typography H4" title="Component Typography H4">H4</a>
+    <a href="#Button Color Text" title="Button Color Text">Text 0</a>
     </li>
 </ol>
   <!-- Recursive call -->
@@ -409,55 +445,44 @@
         </details>
     </li>
     <li>
-    <a href="#Error" title="Error">Error</a>
+    <a href="#Paragraph" title="Paragraph">Paragraph 9</a>
         <details>
           <summary></summary>
 <!-- Recursive call must start at the beginning of the line -->
 
 <ol class="style-docs tree-nav">
     <li>
-    <a href="#Error modifier" title="Error modifier">modifier</a>
+    <a href="#Paragraph modifier" title="Paragraph modifier">modifier 0</a>
     </li>
 </ol>
   <!-- Recursive call -->
         </details>
     </li>
     <li>
-    <a href="#Paragraph" title="Paragraph">Paragraph</a>
+    <a href="#Component" title="Component">Component 10</a>
         <details>
           <summary></summary>
 <!-- Recursive call must start at the beginning of the line -->
 
 <ol class="style-docs tree-nav">
     <li>
-    <a href="#Paragraph modifier" title="Paragraph modifier">modifier</a>
-    </li>
-</ol>
-  <!-- Recursive call -->
-        </details>
-    </li>
-    <li>
-    <a href="#var" title="var">var</a>
+    <a href="#Component Typography" title="Component Typography">Typography </a>
         <details>
           <summary></summary>
 <!-- Recursive call must start at the beginning of the line -->
 
 <ol class="style-docs tree-nav">
     <li>
-    <a href="#var Font" title="var Font">Font</a>
-        <details>
-          <summary></summary>
-<!-- Recursive call must start at the beginning of the line -->
-
-<ol class="style-docs tree-nav">
-    <li>
-    <a href="#var Font Family" title="var Font Family">Family</a>
+    <a href="#Component Typography H1" title="Component Typography H1">H1 0</a>
     </li>
     <li>
-    <a href="#var Font Size" title="var Font Size">Size</a>
+    <a href="#Component Typography H2" title="Component Typography H2">H2 0</a>
     </li>
     <li>
-    <a href="#var Font weight" title="var Font weight">weight</a>
+    <a href="#Component Typography H3" title="Component Typography H3">H3 0</a>
+    </li>
+    <li>
+    <a href="#Component Typography H4" title="Component Typography H4">H4 0</a>
     </li>
 </ol>
   <!-- Recursive call -->
@@ -473,428 +498,36 @@
 <!-- don't indent listPartialContentTree -->
 
 <ol class="style-docs tree-content">
-    <li id="Button">
-      <h3 class="title">
-        <span>Button</span>
-        <a href="#page-top" title="Go Top" class="go-top">&uarr;</a>
-      </h3>
-
-<ol class="style-docs tree-content">
-    <li id="Button Color">
-      <h3 class="title">
-        <span>Button Color</span>
-        <a href="#page-top" title="Go Top" class="go-top">&uarr;</a>
-      </h3>
-
-<ol class="style-docs tree-content">
-    <li id="Button Color Background">
-      <h3 class="title">
-        <span>Button Color Background</span>
-        <a href="#page-top" title="Go Top" class="go-top">&uarr;</a>
-      </h3>
-        <div >
-          <button class="var(--color-button)">
-  Some Text
-</button>
-        </div>
-<!-- pre must start at the beginning of the line -->
-        <details class="style-docs details">
-          <summary class="style-docs summary">Show Style Definition</summary>
-<pre><code class="language-css">--color-button-background:  #333;</code></pre>
-        </details>
-        <details class="style-docs details">
-          <summary class="style-docs summary">Show Example Code</summary>
-<pre><code class="language-html">&lt;button class&#x3D;&quot;var(--color-button)&quot;&gt;
-  Some Text
-&lt;/button&gt;</code></pre>
-           <p class="style-docs p">Source: <a class="style-docs tree-content a" href="../examples/style.css#50">examples/style.css:50</a></p>
-        </details>
-    </li>
-    <li id="Button Color grey">
-      <h3 class="title">
-        <span>Button Color grey</span>
-        <a href="#page-top" title="Go Top" class="go-top">&uarr;</a>
-      </h3>
-        <div >
-          <button class="button">
-  Button Color 
-</button>
-        </div>
-<!-- pre must start at the beginning of the line -->
-        <details class="style-docs details">
-          <summary class="style-docs summary">Show Style Definition</summary>
-<pre><code class="language-css">--color-button: #ccc;
---color-button-background:  #333;
---line-height-button: 1.4em;</code></pre>
-        </details>
-        <details class="style-docs details">
-          <summary class="style-docs summary">Show Example Code</summary>
-<pre><code class="language-html">&lt;button class&#x3D;&quot;button&quot;&gt;
-  Button Color 
-&lt;/button&gt;</code></pre>
-           <p class="style-docs p">Source: <a class="style-docs tree-content a" href="../examples/style.css#36">examples/style.css:36</a></p>
-        </details>
-    </li>
-    <li id="Button Color red">
-      <h3 class="title">
-        <span>Button Color red</span>
-        <a href="#page-top" title="Go Top" class="go-top">&uarr;</a>
-      </h3>
-        <div >
-          <button class="button">
-  Button Color 
-</button>
-        </div>
-<!-- pre must start at the beginning of the line -->
-        <details class="style-docs details">
-          <summary class="style-docs summary">Show Style Definition</summary>
-<pre><code class="language-css">--color-button: #f00;</code></pre>
-        </details>
-        <details class="style-docs details">
-          <summary class="style-docs summary">Show Example Code</summary>
-<pre><code class="language-html">&lt;button class&#x3D;&quot;button&quot;&gt;
-  Button Color 
-&lt;/button&gt;</code></pre>
-           <p class="style-docs p">Source: <a class="style-docs tree-content a" href="../examples/style.css#44">examples/style.css:44</a></p>
-        </details>
-    </li>
-    <li id="Button Color Text">
-      <h3 class="title">
-        <span>Button Color Text</span>
-        <a href="#page-top" title="Go Top" class="go-top">&uarr;</a>
-      </h3>
-        <div >
-          <div style="var(--color-text)">
-  Some Button Text 
-</div>
-        </div>
-<!-- pre must start at the beginning of the line -->
-        <details class="style-docs details">
-          <summary class="style-docs summary">Show Style Definition</summary>
-<pre><code class="language-css">--color-text: magenta;</code></pre>
-        </details>
-        <details class="style-docs details">
-          <summary class="style-docs summary">Show Example Code</summary>
-<pre><code class="language-html">&lt;div style&#x3D;&quot;var(--color-text)&quot;&gt;
-  Some Button Text 
-&lt;/div&gt;</code></pre>
-           <p class="style-docs p">Source: <a class="style-docs tree-content a" href="../examples/style.css#56">examples/style.css:56</a></p>
-        </details>
-    </li>
-</ol>
-  <!-- Recursive call -->
-    </li>
-</ol>
-  <!-- Recursive call -->
-    </li>
-    <li id="Color">
-      <h3 class="title">
-        <span>Color</span>
-        <a href="#page-top" title="Go Top" class="go-top">&uarr;</a>
-      </h3>
-
-<ol class="style-docs tree-content">
-    <li id="Color base">
-      <h3 class="title">
-        <span>Color base</span>
-        <a href="#page-top" title="Go Top" class="go-top">&uarr;</a>
-      </h3>
-        <div >
-          <div class="style-docs color-boxes">
-  <div data-loop="" style="background-color: var(--color-text);" class="style-docs color-bright">
-    Color --color-text 
-  </div>
-<div data-loop="" style="background-color: var(--color-primary);" class="style-docs color-bright">
-    Color --color-primary 
-  </div>
-<div data-loop="" style="background-color: var(--color-secondary);" class="style-docs color-bright">
-    Color --color-secondary 
-  </div>
-</div>
-        </div>
-<!-- pre must start at the beginning of the line -->
-        <details class="style-docs details">
-          <summary class="style-docs summary">Show Style Definition</summary>
-<pre><code class="language-css">--color-text: #ccc;
---color-primary:  #c00;
---color-secondary: #0c0;</code></pre>
-        </details>
-        <details class="style-docs details">
-          <summary class="style-docs summary">Show Example Code</summary>
-<pre><code class="language-html">&lt;div class&#x3D;&quot;style-docs color-boxes&quot;&gt;
-  &lt;div data-loop&#x3D;&quot;&quot; style&#x3D;&quot;background-color: var(--color-text);&quot; class&#x3D;&quot;style-docs color-bright&quot;&gt;
-    Color --color-text 
-  &lt;/div&gt;
-&lt;div data-loop&#x3D;&quot;&quot; style&#x3D;&quot;background-color: var(--color-primary);&quot; class&#x3D;&quot;style-docs color-bright&quot;&gt;
-    Color --color-primary 
-  &lt;/div&gt;
-&lt;div data-loop&#x3D;&quot;&quot; style&#x3D;&quot;background-color: var(--color-secondary);&quot; class&#x3D;&quot;style-docs color-bright&quot;&gt;
-    Color --color-secondary 
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-           <p class="style-docs p">Source: <a class="style-docs tree-content a" href="../examples/style.css#26">examples/style.css:26</a></p>
-        </details>
-    </li>
-</ol>
-  <!-- Recursive call -->
-    </li>
-    <li id="Component">
-      <h3 class="title">
-        <span>Component</span>
-        <a href="#page-top" title="Go Top" class="go-top">&uarr;</a>
-      </h3>
-
-<ol class="style-docs tree-content">
-    <li id="Component Typography">
-      <h3 class="title">
-        <span>Component Typography</span>
-        <a href="#page-top" title="Go Top" class="go-top">&uarr;</a>
-      </h3>
-
-<ol class="style-docs tree-content">
-    <li id="Component Typography H1">
-      <h3 class="title">
-        <span>Component Typography H1</span>
-        <a href="#page-top" title="Go Top" class="go-top">&uarr;</a>
-      </h3>
-          <p class="style-docs description">
-            A public css – not namespaced
-          </p>
-        <div class="web-component">
-          <h1>Hello public World</h1>
-        </div>
-<!-- pre must start at the beginning of the line -->
-        <details class="style-docs details">
-          <summary class="style-docs summary">Show Style Definition</summary>
-<pre><code class="language-css">h1 {
-  color: red;
-}</code></pre>
-        </details>
-        <details class="style-docs details">
-          <summary class="style-docs summary">Show Example Code</summary>
-<pre><code class="language-html">&lt;h1&gt;Hello public World&lt;/h1&gt;</code></pre>
-           <p class="style-docs p">Source: <a class="style-docs tree-content a" href="../examples/web-component.js#8">examples/web-component.js:8</a></p>
-        </details>
-    </li>
-    <li id="Component Typography H2">
-      <h3 class="title">
-        <span>Component Typography H2</span>
-        <a href="#page-top" title="Go Top" class="go-top">&uarr;</a>
-      </h3>
-          <p class="style-docs description">
-            A public css – not namespaced
-          </p>
-        <div class="web-component">
-          <h2>Hello public World</h2>
-        </div>
-<!-- pre must start at the beginning of the line -->
-        <details class="style-docs details">
-          <summary class="style-docs summary">Show Style Definition</summary>
-<pre><code class="language-css">h2 {
-  color: green;
-}</code></pre>
-        </details>
-        <details class="style-docs details">
-          <summary class="style-docs summary">Show Example Code</summary>
-<pre><code class="language-html">&lt;h2&gt;Hello public World&lt;/h2&gt;</code></pre>
-           <p class="style-docs p">Source: <a class="style-docs tree-content a" href="../examples/web-component.js#16">examples/web-component.js:16</a></p>
-        </details>
-    </li>
-    <li id="Component Typography H3">
-      <h3 class="title">
-        <span>Component Typography H3</span>
-        <a href="#page-top" title="Go Top" class="go-top">&uarr;</a>
-      </h3>
-        <div class="web-component-private-css">
-          <h3>Hello Private CSS World</h3>
-        </div>
-<!-- pre must start at the beginning of the line -->
-        <details class="style-docs details">
-          <summary class="style-docs summary">Show Style Definition</summary>
-<pre><code class="language-css">h2 {
-  color: brown; 
-}</code></pre>
-        </details>
-        <details class="style-docs details">
-          <summary class="style-docs summary">Show Example Code</summary>
-<pre><code class="language-html">&lt;h3&gt;Hello Private CSS World&lt;/h3&gt;</code></pre>
-           <p class="style-docs p">Source: <a class="style-docs tree-content a" href="../examples/web-component-private-css.js#9">examples/web-component-private-css.js:9</a></p>
-        </details>
-    </li>
-    <li id="Component Typography H4">
-      <h3 class="title">
-        <span>Component Typography H4</span>
-        <a href="#page-top" title="Go Top" class="go-top">&uarr;</a>
-      </h3>
-        <div class="web-component-private-css">
-          <h4>Hello Private CSS World</h4>
-        </div>
-<!-- pre must start at the beginning of the line -->
-        <details class="style-docs details">
-          <summary class="style-docs summary">Show Style Definition</summary>
-<pre><code class="language-css">h2 {
-  color: maroon; 
-}</code></pre>
-        </details>
-        <details class="style-docs details">
-          <summary class="style-docs summary">Show Example Code</summary>
-<pre><code class="language-html">&lt;h4&gt;Hello Private CSS World&lt;/h4&gt;</code></pre>
-           <p class="style-docs p">Source: <a class="style-docs tree-content a" href="../examples/web-component-private-css.js#16">examples/web-component-private-css.js:16</a></p>
-        </details>
-    </li>
-</ol>
-  <!-- Recursive call -->
-    </li>
-</ol>
-  <!-- Recursive call -->
-    </li>
-    <li id="Error">
-      <h3 class="title">
-        <span>Error</span>
-        <a href="#page-top" title="Go Top" class="go-top">&uarr;</a>
-      </h3>
-
-<ol class="style-docs tree-content">
-    <li id="Error modifier">
-      <h3 class="title">
-        <span>Error modifier</span>
-        <a href="#page-top" title="Go Top" class="go-top">&uarr;</a>
-      </h3>
-          <p class="style-docs description">
-            A paragraph of text
-          </p>
-        <div >
-          <h3 data-loop class="error">
-  Some paragraph text 
-</h3>
-<h3 data-loop class="confirm">
-  Some paragraph text 
-</h3>
-        </div>
-<!-- pre must start at the beginning of the line -->
-        <details class="style-docs details">
-          <summary class="style-docs summary">Show Style Definition</summary>
-<pre><code class="language-css">.error {
-  &amp;.confirm {
-    color: #0c0;
-  }
-  .warning {
-    color: #f90;
-  }
-  &amp;.error {
-    color: #c00;
-  }
-}</code></pre>
-        </details>
-        <details class="style-docs details">
-          <summary class="style-docs summary">Show Example Code</summary>
-<pre><code class="language-html">&lt;h3 data-loop class&#x3D;&quot;error&quot;&gt;
-  Some paragraph text 
-&lt;/h3&gt;
-&lt;h3 data-loop class&#x3D;&quot;confirm&quot;&gt;
-  Some paragraph text 
-&lt;/h3&gt;</code></pre>
-           <p class="style-docs p">Source: <a class="style-docs tree-content a" href="../examples/style.css#88">examples/style.css:88</a></p>
-        </details>
-    </li>
-</ol>
-  <!-- Recursive call -->
-    </li>
-    <li id="Paragraph">
-      <h3 class="title">
-        <span>Paragraph</span>
-        <a href="#page-top" title="Go Top" class="go-top">&uarr;</a>
-      </h3>
-          <p class="style-docs description">
-            A paragraph of text
-          </p>
-        <div >
-          <p>
-  Some paragraph text 
-</p>
-        </div>
-<!-- pre must start at the beginning of the line -->
-        <details class="style-docs details">
-          <summary class="style-docs summary">Show Style Definition</summary>
-<pre><code class="language-css">p {
-  color: var(--color-text);
-}</code></pre>
-        </details>
-        <details class="style-docs details">
-          <summary class="style-docs summary">Show Example Code</summary>
-<pre><code class="language-html">&lt;p&gt;
-  Some paragraph text 
-&lt;/p&gt;</code></pre>
-           <p class="style-docs p">Source: <a class="style-docs tree-content a" href="../examples/style.css#64">examples/style.css:64</a></p>
-        </details>
-
-<ol class="style-docs tree-content">
-    <li id="Paragraph modifier">
-      <h3 class="title">
-        <span>Paragraph modifier</span>
-        <a href="#page-top" title="Go Top" class="go-top">&uarr;</a>
-      </h3>
-          <p class="style-docs description">
-            A paragraph of text
-          </p>
-        <div >
-          <p data-loop class="confirm">
-  Some paragraph text 
-</p>
-<p data-loop class="warning">
-  Some paragraph text 
-</p>
-<p data-loop class="error">
-  Some paragraph text 
-</p>
-        </div>
-<!-- pre must start at the beginning of the line -->
-        <details class="style-docs details">
-          <summary class="style-docs summary">Show Style Definition</summary>
-<pre><code class="language-css">.confirm {
-  color: #0c0;
-}
-.warning {
-  color: #f90;
-}
-.error {
-  color: #c00;
-}</code></pre>
-        </details>
-        <details class="style-docs details">
-          <summary class="style-docs summary">Show Example Code</summary>
-<pre><code class="language-html">&lt;p data-loop class&#x3D;&quot;confirm&quot;&gt;
-  Some paragraph text 
-&lt;/p&gt;
-&lt;p data-loop class&#x3D;&quot;warning&quot;&gt;
-  Some paragraph text 
-&lt;/p&gt;
-&lt;p data-loop class&#x3D;&quot;error&quot;&gt;
-  Some paragraph text 
-&lt;/p&gt;</code></pre>
-           <p class="style-docs p">Source: <a class="style-docs tree-content a" href="../examples/style.css#73">examples/style.css:73</a></p>
-        </details>
-    </li>
-</ol>
-  <!-- Recursive call -->
-    </li>
     <li id="var">
       <h3 class="title">
-        <span>var</span>
+        <span>var 1</span>
         <a href="#page-top" title="Go Top" class="go-top">&uarr;</a>
       </h3>
+        <div >
+          
+        </div>
+<!-- pre must start at the beginning of the line -->
+        <details class="style-docs details">
+          <summary class="style-docs summary">Show Style Definition</summary>
+<pre><code class="language-css"></code></pre>
+        </details>
+        <details class="style-docs details">
+          <summary class="style-docs summary">Show Example Code</summary>
+<pre><code class="language-html"></code></pre>
+           <p class="style-docs p">Source: <a class="style-docs tree-content a" href="../examples/style.css#2">examples/style.css:2</a></p>
+        </details>
 
 <ol class="style-docs tree-content">
     <li id="var Font">
       <h3 class="title">
-        <span>var Font</span>
+        <span>var Font </span>
         <a href="#page-top" title="Go Top" class="go-top">&uarr;</a>
       </h3>
 
 <ol class="style-docs tree-content">
     <li id="var Font Family">
       <h3 class="title">
-        <span>var Font Family</span>
+        <span>var Font Family 0</span>
         <a href="#page-top" title="Go Top" class="go-top">&uarr;</a>
       </h3>
           <p class="style-docs description">
@@ -915,12 +548,12 @@
 <pre><code class="language-html">&lt;div data-loop style&#x3D;&quot;font-family: var(--font-family);&quot;&gt;
   Some Text --font-family
 &lt;/div&gt;</code></pre>
-           <p class="style-docs p">Source: <a class="style-docs tree-content a" href="../examples/style.css#2">examples/style.css:2</a></p>
+           <p class="style-docs p">Source: <a class="style-docs tree-content a" href="../examples/style.css#17">examples/style.css:17</a></p>
         </details>
     </li>
     <li id="var Font Size">
       <h3 class="title">
-        <span>var Font Size</span>
+        <span>var Font Size 0</span>
         <a href="#page-top" title="Go Top" class="go-top">&uarr;</a>
       </h3>
         <div >
@@ -938,12 +571,12 @@
 <pre><code class="language-html">&lt;div style&#x3D;&quot;font-size: var(--font-size); font-family: var(--font-family);&quot;&gt;
   Some Text
 &lt;/div&gt;</code></pre>
-           <p class="style-docs p">Source: <a class="style-docs tree-content a" href="../examples/style.css#20">examples/style.css:20</a></p>
+           <p class="style-docs p">Source: <a class="style-docs tree-content a" href="../examples/style.css#35">examples/style.css:35</a></p>
         </details>
     </li>
     <li id="var Font weight">
       <h3 class="title">
-        <span>var Font weight</span>
+        <span>var Font weight 0</span>
         <a href="#page-top" title="Go Top" class="go-top">&uarr;</a>
       </h3>
           <p class="style-docs description">
@@ -985,7 +618,464 @@
 &lt;div data-loop style&#x3D;&quot;font-family: var(--font-family); font-weight: var(--font-weight-black);&quot;&gt;
   --font-weight-black
 &lt;/div&gt;</code></pre>
-           <p class="style-docs p">Source: <a class="style-docs tree-content a" href="../examples/style.css#10">examples/style.css:10</a></p>
+           <p class="style-docs p">Source: <a class="style-docs tree-content a" href="../examples/style.css#25">examples/style.css:25</a></p>
+        </details>
+    </li>
+</ol>
+  <!-- Recursive call -->
+    </li>
+</ol>
+  <!-- Recursive call -->
+    </li>
+    <li id="Color">
+      <h3 class="title">
+        <span>Color 2</span>
+        <a href="#page-top" title="Go Top" class="go-top">&uarr;</a>
+      </h3>
+        <div >
+          
+        </div>
+<!-- pre must start at the beginning of the line -->
+        <details class="style-docs details">
+          <summary class="style-docs summary">Show Style Definition</summary>
+<pre><code class="language-css"></code></pre>
+        </details>
+        <details class="style-docs details">
+          <summary class="style-docs summary">Show Example Code</summary>
+<pre><code class="language-html"></code></pre>
+           <p class="style-docs p">Source: <a class="style-docs tree-content a" href="../examples/style.css#5">examples/style.css:5</a></p>
+        </details>
+
+<ol class="style-docs tree-content">
+    <li id="Color base">
+      <h3 class="title">
+        <span>Color base 0</span>
+        <a href="#page-top" title="Go Top" class="go-top">&uarr;</a>
+      </h3>
+        <div >
+          <div class="style-docs color-boxes">
+  <div data-loop="" style="background-color: var(--color-text);" class="style-docs color-bright">
+    Color --color-text 
+  </div>
+<div data-loop="" style="background-color: var(--color-primary);" class="style-docs color-bright">
+    Color --color-primary 
+  </div>
+<div data-loop="" style="background-color: var(--color-secondary);" class="style-docs color-bright">
+    Color --color-secondary 
+  </div>
+</div>
+        </div>
+<!-- pre must start at the beginning of the line -->
+        <details class="style-docs details">
+          <summary class="style-docs summary">Show Style Definition</summary>
+<pre><code class="language-css">--color-text: #ccc;
+--color-primary:  #c00;
+--color-secondary: #0c0;</code></pre>
+        </details>
+        <details class="style-docs details">
+          <summary class="style-docs summary">Show Example Code</summary>
+<pre><code class="language-html">&lt;div class&#x3D;&quot;style-docs color-boxes&quot;&gt;
+  &lt;div data-loop&#x3D;&quot;&quot; style&#x3D;&quot;background-color: var(--color-text);&quot; class&#x3D;&quot;style-docs color-bright&quot;&gt;
+    Color --color-text 
+  &lt;/div&gt;
+&lt;div data-loop&#x3D;&quot;&quot; style&#x3D;&quot;background-color: var(--color-primary);&quot; class&#x3D;&quot;style-docs color-bright&quot;&gt;
+    Color --color-primary 
+  &lt;/div&gt;
+&lt;div data-loop&#x3D;&quot;&quot; style&#x3D;&quot;background-color: var(--color-secondary);&quot; class&#x3D;&quot;style-docs color-bright&quot;&gt;
+    Color --color-secondary 
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+           <p class="style-docs p">Source: <a class="style-docs tree-content a" href="../examples/style.css#41">examples/style.css:41</a></p>
+        </details>
+    </li>
+</ol>
+  <!-- Recursive call -->
+    </li>
+    <li id="Error">
+      <h3 class="title">
+        <span>Error 2</span>
+        <a href="#page-top" title="Go Top" class="go-top">&uarr;</a>
+      </h3>
+        <div >
+          
+        </div>
+<!-- pre must start at the beginning of the line -->
+        <details class="style-docs details">
+          <summary class="style-docs summary">Show Style Definition</summary>
+<pre><code class="language-css"></code></pre>
+        </details>
+        <details class="style-docs details">
+          <summary class="style-docs summary">Show Example Code</summary>
+<pre><code class="language-html"></code></pre>
+           <p class="style-docs p">Source: <a class="style-docs tree-content a" href="../examples/style.css#11">examples/style.css:11</a></p>
+        </details>
+
+<ol class="style-docs tree-content">
+    <li id="Error modifier">
+      <h3 class="title">
+        <span>Error modifier 0</span>
+        <a href="#page-top" title="Go Top" class="go-top">&uarr;</a>
+      </h3>
+          <p class="style-docs description">
+            A paragraph of text
+          </p>
+        <div >
+          <h3 data-loop class="error">
+  Some paragraph text 
+</h3>
+<h3 data-loop class="confirm">
+  Some paragraph text 
+</h3>
+        </div>
+<!-- pre must start at the beginning of the line -->
+        <details class="style-docs details">
+          <summary class="style-docs summary">Show Style Definition</summary>
+<pre><code class="language-css">.error {
+  &amp;.confirm {
+    color: #0c0;
+  }
+  .warning {
+    color: #f90;
+  }
+  &amp;.error {
+    color: #c00;
+  }
+}</code></pre>
+        </details>
+        <details class="style-docs details">
+          <summary class="style-docs summary">Show Example Code</summary>
+<pre><code class="language-html">&lt;h3 data-loop class&#x3D;&quot;error&quot;&gt;
+  Some paragraph text 
+&lt;/h3&gt;
+&lt;h3 data-loop class&#x3D;&quot;confirm&quot;&gt;
+  Some paragraph text 
+&lt;/h3&gt;</code></pre>
+           <p class="style-docs p">Source: <a class="style-docs tree-content a" href="../examples/style.css#103">examples/style.css:103</a></p>
+        </details>
+    </li>
+</ol>
+  <!-- Recursive call -->
+    </li>
+    <li id="Button">
+      <h3 class="title">
+        <span>Button 3</span>
+        <a href="#page-top" title="Go Top" class="go-top">&uarr;</a>
+      </h3>
+        <div >
+          
+        </div>
+<!-- pre must start at the beginning of the line -->
+        <details class="style-docs details">
+          <summary class="style-docs summary">Show Style Definition</summary>
+<pre><code class="language-css"></code></pre>
+        </details>
+        <details class="style-docs details">
+          <summary class="style-docs summary">Show Example Code</summary>
+<pre><code class="language-html"></code></pre>
+           <p class="style-docs p">Source: <a class="style-docs tree-content a" href="../examples/style.css#8">examples/style.css:8</a></p>
+        </details>
+
+<ol class="style-docs tree-content">
+    <li id="Button Color">
+      <h3 class="title">
+        <span>Button Color </span>
+        <a href="#page-top" title="Go Top" class="go-top">&uarr;</a>
+      </h3>
+
+<ol class="style-docs tree-content">
+    <li id="Button Color Background">
+      <h3 class="title">
+        <span>Button Color Background 0</span>
+        <a href="#page-top" title="Go Top" class="go-top">&uarr;</a>
+      </h3>
+        <div >
+          <button class="var(--color-button)">
+  Some Text
+</button>
+        </div>
+<!-- pre must start at the beginning of the line -->
+        <details class="style-docs details">
+          <summary class="style-docs summary">Show Style Definition</summary>
+<pre><code class="language-css">--color-button-background:  #333;</code></pre>
+        </details>
+        <details class="style-docs details">
+          <summary class="style-docs summary">Show Example Code</summary>
+<pre><code class="language-html">&lt;button class&#x3D;&quot;var(--color-button)&quot;&gt;
+  Some Text
+&lt;/button&gt;</code></pre>
+           <p class="style-docs p">Source: <a class="style-docs tree-content a" href="../examples/style.css#65">examples/style.css:65</a></p>
+        </details>
+    </li>
+    <li id="Button Color grey">
+      <h3 class="title">
+        <span>Button Color grey 0</span>
+        <a href="#page-top" title="Go Top" class="go-top">&uarr;</a>
+      </h3>
+        <div >
+          <button class="button">
+  Button Color 
+</button>
+        </div>
+<!-- pre must start at the beginning of the line -->
+        <details class="style-docs details">
+          <summary class="style-docs summary">Show Style Definition</summary>
+<pre><code class="language-css">--color-button: #ccc;
+--color-button-background:  #333;
+--line-height-button: 1.4em;</code></pre>
+        </details>
+        <details class="style-docs details">
+          <summary class="style-docs summary">Show Example Code</summary>
+<pre><code class="language-html">&lt;button class&#x3D;&quot;button&quot;&gt;
+  Button Color 
+&lt;/button&gt;</code></pre>
+           <p class="style-docs p">Source: <a class="style-docs tree-content a" href="../examples/style.css#51">examples/style.css:51</a></p>
+        </details>
+    </li>
+    <li id="Button Color red">
+      <h3 class="title">
+        <span>Button Color red 0</span>
+        <a href="#page-top" title="Go Top" class="go-top">&uarr;</a>
+      </h3>
+        <div >
+          <button class="button">
+  Button Color 
+</button>
+        </div>
+<!-- pre must start at the beginning of the line -->
+        <details class="style-docs details">
+          <summary class="style-docs summary">Show Style Definition</summary>
+<pre><code class="language-css">--color-button: #f00;</code></pre>
+        </details>
+        <details class="style-docs details">
+          <summary class="style-docs summary">Show Example Code</summary>
+<pre><code class="language-html">&lt;button class&#x3D;&quot;button&quot;&gt;
+  Button Color 
+&lt;/button&gt;</code></pre>
+           <p class="style-docs p">Source: <a class="style-docs tree-content a" href="../examples/style.css#59">examples/style.css:59</a></p>
+        </details>
+    </li>
+    <li id="Button Color Text">
+      <h3 class="title">
+        <span>Button Color Text 0</span>
+        <a href="#page-top" title="Go Top" class="go-top">&uarr;</a>
+      </h3>
+        <div >
+          <div style="var(--color-text)">
+  Some Button Text 
+</div>
+        </div>
+<!-- pre must start at the beginning of the line -->
+        <details class="style-docs details">
+          <summary class="style-docs summary">Show Style Definition</summary>
+<pre><code class="language-css">--color-text: magenta;</code></pre>
+        </details>
+        <details class="style-docs details">
+          <summary class="style-docs summary">Show Example Code</summary>
+<pre><code class="language-html">&lt;div style&#x3D;&quot;var(--color-text)&quot;&gt;
+  Some Button Text 
+&lt;/div&gt;</code></pre>
+           <p class="style-docs p">Source: <a class="style-docs tree-content a" href="../examples/style.css#71">examples/style.css:71</a></p>
+        </details>
+    </li>
+</ol>
+  <!-- Recursive call -->
+    </li>
+</ol>
+  <!-- Recursive call -->
+    </li>
+    <li id="Paragraph">
+      <h3 class="title">
+        <span>Paragraph 9</span>
+        <a href="#page-top" title="Go Top" class="go-top">&uarr;</a>
+      </h3>
+          <p class="style-docs description">
+            A paragraph of text
+          </p>
+        <div >
+          <p>
+  Some paragraph text 
+</p>
+        </div>
+<!-- pre must start at the beginning of the line -->
+        <details class="style-docs details">
+          <summary class="style-docs summary">Show Style Definition</summary>
+<pre><code class="language-css">p {
+  color: var(--color-text);
+}</code></pre>
+        </details>
+        <details class="style-docs details">
+          <summary class="style-docs summary">Show Example Code</summary>
+<pre><code class="language-html">&lt;p&gt;
+  Some paragraph text 
+&lt;/p&gt;</code></pre>
+           <p class="style-docs p">Source: <a class="style-docs tree-content a" href="../examples/style.css#79">examples/style.css:79</a></p>
+        </details>
+
+<ol class="style-docs tree-content">
+    <li id="Paragraph modifier">
+      <h3 class="title">
+        <span>Paragraph modifier 0</span>
+        <a href="#page-top" title="Go Top" class="go-top">&uarr;</a>
+      </h3>
+          <p class="style-docs description">
+            A paragraph of text
+          </p>
+        <div >
+          <p data-loop class="confirm">
+  Some paragraph text 
+</p>
+<p data-loop class="warning">
+  Some paragraph text 
+</p>
+<p data-loop class="error">
+  Some paragraph text 
+</p>
+        </div>
+<!-- pre must start at the beginning of the line -->
+        <details class="style-docs details">
+          <summary class="style-docs summary">Show Style Definition</summary>
+<pre><code class="language-css">.confirm {
+  color: #0c0;
+}
+.warning {
+  color: #f90;
+}
+.error {
+  color: #c00;
+}</code></pre>
+        </details>
+        <details class="style-docs details">
+          <summary class="style-docs summary">Show Example Code</summary>
+<pre><code class="language-html">&lt;p data-loop class&#x3D;&quot;confirm&quot;&gt;
+  Some paragraph text 
+&lt;/p&gt;
+&lt;p data-loop class&#x3D;&quot;warning&quot;&gt;
+  Some paragraph text 
+&lt;/p&gt;
+&lt;p data-loop class&#x3D;&quot;error&quot;&gt;
+  Some paragraph text 
+&lt;/p&gt;</code></pre>
+           <p class="style-docs p">Source: <a class="style-docs tree-content a" href="../examples/style.css#88">examples/style.css:88</a></p>
+        </details>
+    </li>
+</ol>
+  <!-- Recursive call -->
+    </li>
+    <li id="Component">
+      <h3 class="title">
+        <span>Component 10</span>
+        <a href="#page-top" title="Go Top" class="go-top">&uarr;</a>
+      </h3>
+        <div >
+          
+        </div>
+<!-- pre must start at the beginning of the line -->
+        <details class="style-docs details">
+          <summary class="style-docs summary">Show Style Definition</summary>
+<pre><code class="language-css"></code></pre>
+        </details>
+        <details class="style-docs details">
+          <summary class="style-docs summary">Show Example Code</summary>
+<pre><code class="language-html"></code></pre>
+           <p class="style-docs p">Source: <a class="style-docs tree-content a" href="../examples/style.css#14">examples/style.css:14</a></p>
+        </details>
+
+<ol class="style-docs tree-content">
+    <li id="Component Typography">
+      <h3 class="title">
+        <span>Component Typography </span>
+        <a href="#page-top" title="Go Top" class="go-top">&uarr;</a>
+      </h3>
+
+<ol class="style-docs tree-content">
+    <li id="Component Typography H1">
+      <h3 class="title">
+        <span>Component Typography H1 0</span>
+        <a href="#page-top" title="Go Top" class="go-top">&uarr;</a>
+      </h3>
+          <p class="style-docs description">
+            A public css – not namespaced
+          </p>
+        <div class="web-component">
+          <h1>Hello public World</h1>
+        </div>
+<!-- pre must start at the beginning of the line -->
+        <details class="style-docs details">
+          <summary class="style-docs summary">Show Style Definition</summary>
+<pre><code class="language-css">h1 {
+  color: red;
+}</code></pre>
+        </details>
+        <details class="style-docs details">
+          <summary class="style-docs summary">Show Example Code</summary>
+<pre><code class="language-html">&lt;h1&gt;Hello public World&lt;/h1&gt;</code></pre>
+           <p class="style-docs p">Source: <a class="style-docs tree-content a" href="../examples/web-component.js#8">examples/web-component.js:8</a></p>
+        </details>
+    </li>
+    <li id="Component Typography H2">
+      <h3 class="title">
+        <span>Component Typography H2 0</span>
+        <a href="#page-top" title="Go Top" class="go-top">&uarr;</a>
+      </h3>
+          <p class="style-docs description">
+            A public css – not namespaced
+          </p>
+        <div class="web-component">
+          <h2>Hello public World</h2>
+        </div>
+<!-- pre must start at the beginning of the line -->
+        <details class="style-docs details">
+          <summary class="style-docs summary">Show Style Definition</summary>
+<pre><code class="language-css">h2 {
+  color: green;
+}</code></pre>
+        </details>
+        <details class="style-docs details">
+          <summary class="style-docs summary">Show Example Code</summary>
+<pre><code class="language-html">&lt;h2&gt;Hello public World&lt;/h2&gt;</code></pre>
+           <p class="style-docs p">Source: <a class="style-docs tree-content a" href="../examples/web-component.js#16">examples/web-component.js:16</a></p>
+        </details>
+    </li>
+    <li id="Component Typography H3">
+      <h3 class="title">
+        <span>Component Typography H3 0</span>
+        <a href="#page-top" title="Go Top" class="go-top">&uarr;</a>
+      </h3>
+        <div class="web-component-private-css">
+          <h3>Hello Private CSS World</h3>
+        </div>
+<!-- pre must start at the beginning of the line -->
+        <details class="style-docs details">
+          <summary class="style-docs summary">Show Style Definition</summary>
+<pre><code class="language-css">h2 {
+  color: brown; 
+}</code></pre>
+        </details>
+        <details class="style-docs details">
+          <summary class="style-docs summary">Show Example Code</summary>
+<pre><code class="language-html">&lt;h3&gt;Hello Private CSS World&lt;/h3&gt;</code></pre>
+           <p class="style-docs p">Source: <a class="style-docs tree-content a" href="../examples/web-component-private-css.js#9">examples/web-component-private-css.js:9</a></p>
+        </details>
+    </li>
+    <li id="Component Typography H4">
+      <h3 class="title">
+        <span>Component Typography H4 0</span>
+        <a href="#page-top" title="Go Top" class="go-top">&uarr;</a>
+      </h3>
+        <div class="web-component-private-css">
+          <h4>Hello Private CSS World</h4>
+        </div>
+<!-- pre must start at the beginning of the line -->
+        <details class="style-docs details">
+          <summary class="style-docs summary">Show Style Definition</summary>
+<pre><code class="language-css">h2 {
+  color: maroon; 
+}</code></pre>
+        </details>
+        <details class="style-docs details">
+          <summary class="style-docs summary">Show Example Code</summary>
+<pre><code class="language-html">&lt;h4&gt;Hello Private CSS World&lt;/h4&gt;</code></pre>
+           <p class="style-docs p">Source: <a class="style-docs tree-content a" href="../examples/web-component-private-css.js#16">examples/web-component-private-css.js:16</a></p>
         </details>
     </li>
 </ol>

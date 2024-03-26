@@ -35,7 +35,8 @@ function buildNameList(rulesStack, level = 0) {
   return nameList;
 }
 
-function extractClasses(css) {
+// level: stack length from which to gather classes
+function extractSelectors(css, level = 0) {
   const ast = csstree.parse(css);
   const rulesStack = [];
   log.info('ast', ast);
@@ -63,6 +64,8 @@ function extractClasses(css) {
     }
   });
 }
+
+
 
 // Example usage
 const css1 = `p.red { color: red; } p.green { color: green; }`;

@@ -38,7 +38,7 @@ function getStyleRoot() {
   const styleRoot = await getStyleRoot();
   const config = await loadConfigFile();
   //log.info('Style root', styleRoot);
-  const {docsList, docsTree, cssFilePaths} = await extractStyleDocs(styleRoot);
+  const {docsList, docsTree, sortedDocsTree, cssFilePaths} = await extractStyleDocs(styleRoot);
   //log.info('Docs list', docsList); 
   //log.info('Docs tree', JSON.stringify(docsTree, null, 2));
   //log.info('CSS file paths', cssFilePaths);
@@ -47,7 +47,7 @@ function getStyleRoot() {
     absoluteTemplatePath,
     {
       docsList,
-      docsTree,
+      docsTree: sortedDocsTree,
       outputPath: 'docs/style-doc.html',
       cssFilePaths: cssFilePaths,
     }

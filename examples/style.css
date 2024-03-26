@@ -1,5 +1,20 @@
 :root {
-/** styleDoc - var Font Family
+/** styleDoc 1 var 
+*/
+
+/** styleDoc 2 Color 
+*/
+
+/** styleDoc 3 Button 
+*/
+
+/** styleDoc 2 Error 
+*/
+
+/** styleDoc 10 Component 
+*/
+
+/** styleDoc var Font Family
 The base font family for the site.
 <div data-loop style="font-family: var(--font-family);">
   Some Text [cssName]
@@ -61,7 +76,7 @@ Available font weights for the site.
 
 }
 
-/** styleDoc - Paragraph
+/** styleDoc 9 Paragraph
 A paragraph of text
 <p>
   Some paragraph text 
